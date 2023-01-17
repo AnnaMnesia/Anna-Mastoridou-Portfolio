@@ -1,0 +1,512 @@
+:root {
+    /* Colors */
+    --c-bg: hsl(0, 0%, 0%);
+    --c-text: hsl(0, 0%, 95%);
+
+    /* Font Size */
+    --fs-text: 14px;
+    --fs-heading: 18px;
+    --fs-title: 60px;
+
+    /* Sizes */
+    --column: 90px;
+    --margin: 80px;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url(../images/bg-projects.png) center/cover no-repeat fixed;
+    width: 100vw;
+    display: block;
+    color: var(--c-text);
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: var(--fs-text);
+    /* The font-feature-settings CSS property controls advanced typographic features in OpenType fonts. */
+    font-feature-settings: "liga";
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    display: block;
+}
+
+/* ------- Header ------ */
+
+.pageHeader {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: calc(var(--column)*9);
+    height: calc(var(--fs-title) + 0.8rem);
+    padding-top: 50px;
+    padding-right: var(--margin);
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 1rem;
+    border-bottom: 1px solid currentColor;
+
+}
+
+.pageHeader .title {
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+}
+
+.pageHeader .title .label {
+    font-size: var(--fs-heading);
+}
+
+.pageHeader .title .name {
+    font-size: var(--fs-title);
+}
+
+/* Site Header */
+.siteHeader {
+    position: fixed;
+    z-index: 2;
+    left: 40px;
+    top: 40px;
+}
+
+.siteHeader_title {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    line-height: .9;
+    cursor: crosshair;
+}
+
+.siteHeader_title a {
+    color: var(--c-text);
+    text-decoration: none;
+    cursor: crosshair;
+}
+
+.siteHeader_title .line3 {
+    text-align: right;
+}
+
+/* Main */
+
+.projects_inner {
+    position: absolute;
+    z-index: 1;
+    top: 13rem;
+    right: 15rem;
+}
+
+.projectItem {
+    position: relative;
+}
+
+
+.projectItem:hover {
+    color: rgba(128, 128, 128, 0.616);
+    transition: 0.5s;
+}
+
+
+.image_one {
+    position: absolute;
+    z-index: 2;
+    left: -600px;
+    top: 150px;
+    width: calc(var(--column)*5);
+    visibility: hidden;
+    border: 1px solid white;
+}
+
+.image_two {
+    position: absolute;
+    z-index: 2;
+    left: -600px;
+    top: 53px;
+    width: calc(var(--column)*5);
+    visibility: hidden;
+    border: 1px solid white;
+}
+
+.image_three {
+    position: absolute;
+    z-index: 2;
+    left: -600px;
+    top: -43px;
+    width: calc(var(--column)*5);
+    visibility: hidden;
+    border: 1px solid white;
+}
+
+.image_four {
+    position: absolute;
+    z-index: 2;
+    left: -600px;
+    top: -133px;
+    width: calc(var(--column)*5);
+    visibility: hidden;
+    border: 1px solid white;
+}
+
+.image_five {
+    position: absolute;
+    z-index: 2;
+    left: -600px;
+    top: -230px;
+    width: calc(var(--column)*5);
+    visibility: hidden;
+    border: 1px solid white;
+}
+
+.projectItem:hover .image_one,
+.projectItem:hover .image_two,
+.projectItem:hover .image_three,
+.projectItem:hover .image_four,
+.projectItem:hover .image_five {
+    visibility: visible;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    padding: 2rem;
+    cursor: crosshair;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.cat {
+    font-size: 14px;
+    font-family: 'Marcellus', serif;
+}
+
+.one .index,
+.two .index,
+.three .index,
+.four .index,
+.five .index {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    position: absolute;
+    top: 40px;
+    font-size: 18px;
+    left: -36px;
+}
+
+/* Footer */
+
+.footerCopyright {
+    position: absolute;
+    bottom: -300px;
+    left: 430px;
+    padding-bottom: 3.5rem;
+}
+
+.footerCopyright .en {
+    font-family: 'Marcellus', serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.04rem;
+    opacity: .5;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1180px) {
+
+    /* Header */
+    .pageHeader {
+        width: calc(var(--column)*6);
+    }
+
+    /* Main */
+    .projects_inner {
+        right: 9rem;
+    }
+
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .cat {
+        font-size: 13px;
+    }
+
+    .one .index,
+    .two .index,
+    .three .index,
+    .four .index,
+    .five .index {
+        font-size: 15px;
+    }
+
+    .image_one,
+    .image_two,
+    .image_three,
+    .image_four,
+    .image_five {
+        width: calc(var(--column)*4.5);
+        height: 200px;
+        left: -550px;
+    }
+
+    .footerCopyright .en {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+
+    /* Header */
+
+    .siteHeader_title {
+        position: fixed;
+        z-index: 2;
+        right: 20px;
+        top: 40px;
+        font-family: 'Cinzel', serif;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        line-height: .9;
+    }
+
+    .pageHeader {
+        width: calc(var(--column)*7.5);
+    }
+
+    /* Main */
+    .projects_inner {
+        right: 10rem;
+    }
+
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .cat {
+        font-size: 13px;
+    }
+
+    .one .index,
+    .two .index,
+    .three .index,
+    .four .index,
+    .five .index {
+        font-size: 15px;
+    }
+
+    .image_one,
+    .image_two,
+    .image_three,
+    .image_four,
+    .image_five {
+        display: none;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -200px;
+        left: 30px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 764px) {
+    /* Header */
+
+    .siteHeader_title {
+        right: 20px;
+        top: 50px;
+        font-size: 16px;
+    }
+
+    .pageHeader {
+        width: calc(var(--column)*5);
+        height: calc(var(--fs-title));
+    }
+
+    .pageHeader .title .label {
+        font-size: var(--fs-heading);
+    }
+
+    .pageHeader .title .name {
+        font-size: 45px;
+    }
+
+    /* Main */
+    .projects_inner {
+        right: 6rem;
+    }
+
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .cat {
+        font-size: 12px;
+    }
+
+    .one .index,
+    .two .index,
+    .three .index,
+    .four .index,
+    .five .index {
+        font-size: 14px;
+    }
+
+    .image_one,
+    .image_two,
+    .image_three,
+    .image_four,
+    .image_five {
+        display: none;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -200px;
+        left: 100px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 489px) {
+
+    /* Header */
+    .pageHeader {
+        height: calc(var(--fs-title) + 0.01);
+        padding-top: 90px;
+        width: calc(var(--column)*3.2);
+    }
+
+    .pageHeader .title .label {
+        font-size: 20px;
+    }
+
+    .pageHeader .title .name {
+        font-size: 40px;
+    }
+
+    .siteHeader_title {
+        right: 20px;
+        top: 40px;
+        font-size: 14px;
+    }
+
+    /* Main */
+    .projects_inner {
+        right: 5rem;
+    }
+
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .cat {
+        font-size: 9px;
+    }
+
+    .one .index,
+    .two .index,
+    .three .index,
+    .four .index,
+    .five .index {
+        font-size: 12px;
+    }
+
+    .image_one,
+    .image_two,
+    .image_three,
+    .image_four,
+    .image_five {
+        display: none;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -200px;
+        left: 30px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    /* Header */
+    .pageHeader {
+        height: calc(var(--fs-title) + 0.01);
+        padding-top: 90px;
+        width: calc(var(--column)*3.2);
+    }
+
+    .pageHeader .title .label {
+        font-size: 14px;
+    }
+
+    .pageHeader .title .name {
+        font-size: 30px;
+    }
+
+    .siteHeader_title {
+        right: 20px;
+        top: 70px;
+    }
+
+    /* Main */
+    .projects_inner {
+        right: 2rem;
+    }
+
+
+    .image_one,
+    .image_two,
+    .image_three,
+    .image_four,
+    .image_five {
+        display: none;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -200px;
+        left: 30px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 25px;
+    }
+}

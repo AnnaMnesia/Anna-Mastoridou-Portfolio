@@ -3,10 +3,146 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Marcellus&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
     <link rel="stylesheet" href="styles/main.scss" />
-    <title>Hello, World!</title>
+    <title>ANNA MASTORIDOU PORTFOLIO</title>
   </head>
+  <!-- Body -->
   <body>
-    <h1>Hello, World!</h1>
+    <!-- Menu Navigation  -->
+    <!-- Header Nav Title -->
+    <header class="siteHeader">
+      <div class="nav-toggle">MENU</div>
+    </header>
+    <!--end of Header Nav Title -->
+    <!-- Menu Nav That is hidden - works with JavaScript-->
+    <nav class="nav">
+      <h1 class="siteNav_title">
+          <div class="line1">ANNA</div>
+          <div class="line2">MASTORIDOU</div>
+          <div class="line3">PORTFOLIO</div>
+      </h1>
+      <div class="close">CLOSE</div>
+      <ol class="siteNav_pages">
+          <li x-bind="smallTextBtn">
+              <a href="index.html">
+                  <div class="label">A</div>
+                  <div class="name">MAIN</div>
+              </a>
+          </li>
+          <li x-bind="smallTextBtn">
+              <a href="./projects.html">
+                  <div class="label">B</div>
+                  <div class="name">PROJECT INDEX</div>
+              </a>
+          </li>
+          <li x-bind="smallTextBtn">
+              <a href="./about.html">
+                  <div class="label">C</div>
+                  <div class="name">ABOUT ME</div>
+              </a>
+          </li>
+          <li x-bind="smallTextBtn">
+              <a href="info.html">
+                  <div class="label">D</div>
+                  <div class="name">INFO</div>
+              </a>
+          </li>
+      </ol>
+
+      <p class="siteNav_glimpse">
+          "With a mission
+          <br>
+          to present the possibilities
+          <br>
+          of web building & design.""
+      </p>
+  </div>
+  </nav>
+<!--end of Menu Navigation  -->
+<!-- Main -->
+<main id="PageWrapper">
+  <div class="page page-main">
+      <div class="main">
+          <div class="main_header">
+              <h1 class="main_title">
+                  <div class="line1">ANNA</div>
+                  <div class="line2">MASTORIDOU</div>
+                  <div class="line3">PORTFOLIO</div>
+              </h1>
+              <!-- Light Dark Mode -->
+              <div id="toggle">
+                  <i class="indicator"></i>
+              </div>
+          </div>
+
+          <!--Gallery -->
+          <div class="slider-wrap">
+              <div class="slider">
+                  <div class="slider-inner">
+                      <div class="item">
+                          <a class="main_projectItem" href="projects.html" target="_blank">
+                              <img class="image_one" src="./images/Sidebar-Menu.png" 
+                              height="320" alt="SideBar Menu with Sub-Menus Page">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a class="main_projectItem" href="projects.html" target="_blank">
+                              <img class="image_two" src="./images/E-Commerce Website.png"
+                              height="320" alt="E-Commerce Website">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a class="main_projectItem" href="projects.html" target="_blank">
+                              <img class="image_three" src="./images/Urban-Fashion-Site.png" 
+                              height="320" alt="Urban Fashion Website">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a class="main_projectItem" href="projects.html" target="_blank">
+                              <img class="image_four" src="./images/Perfume-Ad.jpeg"
+                              height="320" alt="Order Summary For Music">
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a class="main_projectItem" href="projects.html" target="_blank">
+                              <img class="image_five" src="./images/Gaming-Website.png"
+                              height="320" alt="Gaming Website">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="progress-bar">
+                  <div class="prog-bar-inner"></div>
+              </div>
+          </div>
+          <!--end of Gallery -->
+
+          <!--small Description -->
+          <p class="main_desc">
+              "Online Marketer & Web Developer"
+              <br>
+              "based in Germany."
+          </p>
+          <!--end of small Description -->
+      </div>
+  </div>
+</main>
+<!--end of Main-->
+
+<!--JavaScript-->
+<script src="./js/main.js"></script>
+<!--end of JavaScript-->
   </body>
+  <!--end of Body-->
 </html>

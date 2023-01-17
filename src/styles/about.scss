@@ -1,0 +1,412 @@
+:root {
+    /* Colors */
+    --c-bg: hsl(0, 0%, 0%);
+    --c-text: hsl(0, 0%, 95%);
+
+    /* Font Size */
+    --fs-text: 14px;
+    --fs-heading: 18px;
+    --fs-title: 60px;
+
+    /* Sizes */
+    --column: 90px;
+    --margin: 80px;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background: url(../images/bg-projects.png) center/cover no-repeat fixed;
+    width: 100vw;
+    display: block;
+    color: var(--c-text);
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: var(--fs-text);
+    /* The font-feature-settings CSS property controls advanced typographic features in OpenType fonts. */
+    font-feature-settings: "liga";
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    display: block;
+}
+
+/* ------- Header ------ */
+
+.pageHeader {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(var(--fs-title) + 0.8rem);
+    padding-top: 10px;
+    padding-right: var(--margin);
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 1rem;
+    border-bottom: 1px solid gray;
+
+}
+
+.pageHeader .title {
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+    padding-left: 110px;
+}
+
+.pageHeader .title .label {
+
+    font-size: var(--fs-heading);
+}
+
+.pageHeader .title .name {
+    font-size: var(--fs-title);
+}
+
+
+.vertical_line {
+    position: fixed;
+    left: 60px;
+    height: 100%;
+    width: 1px;
+    background-color: gray;
+}
+
+.siteHeader {
+    position: fixed;
+    z-index: 2;
+    left: 110px;
+    top: 650px;
+}
+
+.siteHeader_title {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: .9;
+    cursor: crosshair;
+}
+
+.siteHeader_title a {
+    color: var(--c-text);
+    text-decoration: none;
+    cursor: crosshair;
+}
+
+.siteHeader_title .line3 {
+    text-align: right;
+}
+
+/* Main */
+img {
+    position: fixed;
+    top: 100px;
+    left: 110px;
+    border: 1px solid gray;
+    height: 22rem;
+    border-radius: 0.1rem;
+}
+
+.about_inner {
+    position: absolute;
+    z-index: 1;
+    top: 13rem;
+    right: 6rem;
+}
+
+.aboutItem {
+    width: 550px;
+    position: relative;
+    padding: 0 0 6rem 0;
+}
+
+.one .index,
+.two .index {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    font-size: 15px;
+    left: -250px;
+}
+
+p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    padding-bottom: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem 1.5rem;
+}
+
+// Footer
+
+.footerCopyright {
+    position: absolute;
+    bottom: -600px;
+    left: 430px;
+    padding-bottom: 3.5rem;
+}
+
+.footerCopyright .en {
+    font-family: 'Marcellus', serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.04rem;
+    opacity: .5;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1280px) {
+
+    /* Header */
+
+    /* Main */
+    img {
+        height: 20rem;
+    }
+
+    .about_inner {
+        right: 5rem;
+    }
+
+    .aboutItem {
+        width: 450px;
+    }
+
+    .one .index,
+    .two .index {
+        font-size: 15px;
+        left: -150px;
+    }
+
+    .footerCopyright .en {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 1038px) {
+
+    /* Header */
+
+    .title {
+        padding-top: 1rem;
+    }
+
+    .pageHeader .title .label {
+        font-size: 15px;
+    }
+
+    .pageHeader .title .name {
+        font-size: 45px;
+    }
+
+    /* Main */
+    img {
+        height: 15rem;
+    }
+
+    .about_inner {
+        right: 5rem;
+    }
+
+    .aboutItem {
+        width: 350px;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -600px;
+        left: 450px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+
+    /* Header */
+
+
+    /* Main */
+    .about_inner {
+        right: 5rem;
+    }
+
+    .one .index {
+        font-size: 15px;
+        top: -50px;
+        left: 0;
+    }
+
+    .two .index {
+        left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 2rem;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -600px;
+        left: 350px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 764px) {
+    /* Header */
+
+    .pageHeader .title .label {
+        font-size: var(--fs-heading);
+    }
+
+    .pageHeader .title .name {
+        font-size: 45px;
+    }
+
+    /* Main */
+    .about_inner {
+        right: 5rem;
+    }
+
+    .one .index,
+    .two .index {
+        font-size: 14px;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -500px;
+        left: 350px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 732px) {
+
+    /* Header */
+    .pageHeader {
+        position: absolute;
+    }
+
+
+    .pageHeader .title .label {
+        font-size: 20px;
+    }
+
+    .pageHeader .title .name {
+        font-size: 40px;
+    }
+
+    .siteHeader_title {
+        font-size: 14px;
+    }
+
+    .siteHeader {
+        display: none;
+    }
+
+
+    /* Main */
+    img {
+        position: absolute;
+        height: 28rem;
+    }
+
+    .about_inner {
+        top: 650px;
+        left: 110px;
+    }
+
+    .one .index {
+        font-size: 15px;
+        top: -50px;
+        left: 0;
+    }
+
+    .two .index {
+        left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 2rem;
+    }
+
+    .footerCopyright {
+        position: absolute;
+        bottom: -950px;
+        left: 110px;
+        padding-bottom: 3.5rem;
+    }
+
+    .footerCopyright .en {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    /* Header */
+    .pageHeader .title {
+        padding-left: 40px;
+    }
+
+    .siteHeader {
+        display: none;
+    }
+
+    .vertical_line {
+        display: none;
+    }
+
+    /* Main */
+    img {
+        left: 40px;
+    }
+
+    .about_inner {
+        left: 40px;
+    }
+
+    .footerCopyright {
+        bottom: -1050px;
+        left: 40px;
+    }
+}
